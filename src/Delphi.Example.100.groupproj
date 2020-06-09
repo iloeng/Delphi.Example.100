@@ -9,6 +9,9 @@
         <Projects Include="002-动态建立主菜单项\动态建立主菜单项.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="003-窗口界面的动态分割条\窗口界面的动态分割条.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="动态建立主菜单项:Make">
         <MSBuild Projects="002-动态建立主菜单项\动态建立主菜单项.dproj" Targets="Make"/>
     </Target>
+    <Target Name="窗口界面的动态分割条">
+        <MSBuild Projects="003-窗口界面的动态分割条\窗口界面的动态分割条.dproj"/>
+    </Target>
+    <Target Name="窗口界面的动态分割条:Clean">
+        <MSBuild Projects="003-窗口界面的动态分割条\窗口界面的动态分割条.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="窗口界面的动态分割条:Make">
+        <MSBuild Projects="003-窗口界面的动态分割条\窗口界面的动态分割条.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
