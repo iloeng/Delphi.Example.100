@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4A264535-5286-44E0-8F73-4174F04B7A75}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="001-ToolBar工具栏控件的使用\ToolBar工具栏控件的使用.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="002-动态建立主菜单项\动态建立主菜单项.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ToolBar工具栏控件的使用">
+        <MSBuild Projects="001-ToolBar工具栏控件的使用\ToolBar工具栏控件的使用.dproj"/>
+    </Target>
+    <Target Name="ToolBar工具栏控件的使用:Clean">
+        <MSBuild Projects="001-ToolBar工具栏控件的使用\ToolBar工具栏控件的使用.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ToolBar工具栏控件的使用:Make">
+        <MSBuild Projects="001-ToolBar工具栏控件的使用\ToolBar工具栏控件的使用.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="动态建立主菜单项">
+        <MSBuild Projects="002-动态建立主菜单项\动态建立主菜单项.dproj"/>
+    </Target>
+    <Target Name="动态建立主菜单项:Clean">
+        <MSBuild Projects="002-动态建立主菜单项\动态建立主菜单项.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="动态建立主菜单项:Make">
+        <MSBuild Projects="002-动态建立主菜单项\动态建立主菜单项.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
