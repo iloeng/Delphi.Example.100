@@ -12,6 +12,9 @@
         <Projects Include="003-窗口界面的动态分割条\窗口界面的动态分割条.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="004-动态设置选项卡页面\动态设置选项卡页面.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="窗口界面的动态分割条:Make">
         <MSBuild Projects="003-窗口界面的动态分割条\窗口界面的动态分割条.dproj" Targets="Make"/>
     </Target>
+    <Target Name="动态设置选项卡页面">
+        <MSBuild Projects="004-动态设置选项卡页面\动态设置选项卡页面.dproj"/>
+    </Target>
+    <Target Name="动态设置选项卡页面:Clean">
+        <MSBuild Projects="004-动态设置选项卡页面\动态设置选项卡页面.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="动态设置选项卡页面:Make">
+        <MSBuild Projects="004-动态设置选项卡页面\动态设置选项卡页面.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条;动态设置选项卡页面"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean;动态设置选项卡页面:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make;动态设置选项卡页面:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
