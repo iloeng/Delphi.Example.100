@@ -15,6 +15,9 @@
         <Projects Include="004-动态设置选项卡页面\动态设置选项卡页面.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="005-在标题栏中自定义按钮\在标题栏中自定义按钮.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="动态设置选项卡页面:Make">
         <MSBuild Projects="004-动态设置选项卡页面\动态设置选项卡页面.dproj" Targets="Make"/>
     </Target>
+    <Target Name="在标题栏中自定义按钮">
+        <MSBuild Projects="005-在标题栏中自定义按钮\在标题栏中自定义按钮.dproj"/>
+    </Target>
+    <Target Name="在标题栏中自定义按钮:Clean">
+        <MSBuild Projects="005-在标题栏中自定义按钮\在标题栏中自定义按钮.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="在标题栏中自定义按钮:Make">
+        <MSBuild Projects="005-在标题栏中自定义按钮\在标题栏中自定义按钮.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条;动态设置选项卡页面"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条;动态设置选项卡页面;在标题栏中自定义按钮"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean;动态设置选项卡页面:Clean"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean;动态设置选项卡页面:Clean;在标题栏中自定义按钮:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make;动态设置选项卡页面:Make"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make;动态设置选项卡页面:Make;在标题栏中自定义按钮:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

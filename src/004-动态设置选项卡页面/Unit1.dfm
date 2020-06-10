@@ -19,6 +19,7 @@ object Form1: TForm1
     Top = 32
     Width = 289
     Height = 193
+    MultiLine = True
     TabOrder = 0
   end
   object Button_1: TButton
