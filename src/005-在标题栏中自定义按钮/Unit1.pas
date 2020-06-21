@@ -42,7 +42,7 @@ end;
 procedure TForm4.WMNCActivate(var Msg: TWMNCActivate);
 begin
 inherited;
-DrawCaptButton;
+  DrawCaptButton;
 end;
 
 procedure TForm4.WMNCHitTest(var Msg: TWMNCHitTest);
