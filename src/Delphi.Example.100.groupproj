@@ -36,6 +36,9 @@
         <Projects Include="011-修改系统级菜单\修改系统级菜单.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="012-实现透明窗体效果\实现透明窗体效果.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -143,14 +146,23 @@
     <Target Name="修改系统级菜单:Make">
         <MSBuild Projects="011-修改系统级菜单\修改系统级菜单.dproj" Targets="Make"/>
     </Target>
+    <Target Name="实现透明窗体效果">
+        <MSBuild Projects="012-实现透明窗体效果\实现透明窗体效果.dproj"/>
+    </Target>
+    <Target Name="实现透明窗体效果:Clean">
+        <MSBuild Projects="012-实现透明窗体效果\实现透明窗体效果.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="实现透明窗体效果:Make">
+        <MSBuild Projects="012-实现透明窗体效果\实现透明窗体效果.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条;动态设置选项卡页面;在标题栏中自定义按钮;窗体开合窗帘式效果;WindowsXP界面效果;实现OutLook滚动工具栏效果;在下拉列表框中显示树形视图;自定义系统的About页;修改系统级菜单"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条;动态设置选项卡页面;在标题栏中自定义按钮;窗体开合窗帘式效果;WindowsXP界面效果;实现OutLook滚动工具栏效果;在下拉列表框中显示树形视图;自定义系统的About页;修改系统级菜单;实现透明窗体效果"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean;动态设置选项卡页面:Clean;在标题栏中自定义按钮:Clean;窗体开合窗帘式效果:Clean;WindowsXP界面效果:Clean;实现OutLook滚动工具栏效果:Clean;在下拉列表框中显示树形视图:Clean;自定义系统的About页:Clean;修改系统级菜单:Clean"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean;动态设置选项卡页面:Clean;在标题栏中自定义按钮:Clean;窗体开合窗帘式效果:Clean;WindowsXP界面效果:Clean;实现OutLook滚动工具栏效果:Clean;在下拉列表框中显示树形视图:Clean;自定义系统的About页:Clean;修改系统级菜单:Clean;实现透明窗体效果:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make;动态设置选项卡页面:Make;在标题栏中自定义按钮:Make;窗体开合窗帘式效果:Make;WindowsXP界面效果:Make;实现OutLook滚动工具栏效果:Make;在下拉列表框中显示树形视图:Make;自定义系统的About页:Make;修改系统级菜单:Make"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make;动态设置选项卡页面:Make;在标题栏中自定义按钮:Make;窗体开合窗帘式效果:Make;WindowsXP界面效果:Make;实现OutLook滚动工具栏效果:Make;在下拉列表框中显示树形视图:Make;自定义系统的About页:Make;修改系统级菜单:Make;实现透明窗体效果:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
