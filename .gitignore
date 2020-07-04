@@ -69,3 +69,5 @@ __recovery/
 modules/
 
 Win32/
+
+LibrarySupport/
