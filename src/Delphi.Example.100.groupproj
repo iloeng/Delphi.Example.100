@@ -75,6 +75,9 @@
         <Projects Include="023-奇妙的拼图游戏\奇妙的拼图游戏.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="024-使用 PaintBox 控件制作画图程序\使用PaintBox控件制作画图程序.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -299,14 +302,23 @@
     <Target Name="奇妙的拼图游戏:Make">
         <MSBuild Projects="023-奇妙的拼图游戏\奇妙的拼图游戏.dproj" Targets="Make"/>
     </Target>
+    <Target Name="使用PaintBox控件制作画图程序">
+        <MSBuild Projects="024-使用 PaintBox 控件制作画图程序\使用PaintBox控件制作画图程序.dproj"/>
+    </Target>
+    <Target Name="使用PaintBox控件制作画图程序:Clean">
+        <MSBuild Projects="024-使用 PaintBox 控件制作画图程序\使用PaintBox控件制作画图程序.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="使用PaintBox控件制作画图程序:Make">
+        <MSBuild Projects="024-使用 PaintBox 控件制作画图程序\使用PaintBox控件制作画图程序.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条;动态设置选项卡页面;在标题栏中自定义按钮;窗体开合窗帘式效果;WindowsXP界面效果;实现OutLook滚动工具栏效果;在下拉列表框中显示树形视图;自定义系统的About页;修改系统级菜单;实现透明窗体效果;爆破特技窗体;只允许建立一次子窗体的MDI程序;从外部DLL中调用子窗口;DllMdiChildForm;新颖的资源管理器界面;如何生成半圆形窗口;制作字幕滚动窗体;详解Canvas生成变色窗口背景;WINAMP风格磁化窗口;软件封面的图片显示制作;实现图片任意角度的旋转;奇妙的拼图游戏"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用;动态建立主菜单项;窗口界面的动态分割条;动态设置选项卡页面;在标题栏中自定义按钮;窗体开合窗帘式效果;WindowsXP界面效果;实现OutLook滚动工具栏效果;在下拉列表框中显示树形视图;自定义系统的About页;修改系统级菜单;实现透明窗体效果;爆破特技窗体;只允许建立一次子窗体的MDI程序;从外部DLL中调用子窗口;DllMdiChildForm;新颖的资源管理器界面;如何生成半圆形窗口;制作字幕滚动窗体;详解Canvas生成变色窗口背景;WINAMP风格磁化窗口;软件封面的图片显示制作;实现图片任意角度的旋转;奇妙的拼图游戏;使用PaintBox控件制作画图程序"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean;动态设置选项卡页面:Clean;在标题栏中自定义按钮:Clean;窗体开合窗帘式效果:Clean;WindowsXP界面效果:Clean;实现OutLook滚动工具栏效果:Clean;在下拉列表框中显示树形视图:Clean;自定义系统的About页:Clean;修改系统级菜单:Clean;实现透明窗体效果:Clean;爆破特技窗体:Clean;只允许建立一次子窗体的MDI程序:Clean;从外部DLL中调用子窗口:Clean;DllMdiChildForm:Clean;新颖的资源管理器界面:Clean;如何生成半圆形窗口:Clean;制作字幕滚动窗体:Clean;详解Canvas生成变色窗口背景:Clean;WINAMP风格磁化窗口:Clean;软件封面的图片显示制作:Clean;实现图片任意角度的旋转:Clean;奇妙的拼图游戏:Clean"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Clean;动态建立主菜单项:Clean;窗口界面的动态分割条:Clean;动态设置选项卡页面:Clean;在标题栏中自定义按钮:Clean;窗体开合窗帘式效果:Clean;WindowsXP界面效果:Clean;实现OutLook滚动工具栏效果:Clean;在下拉列表框中显示树形视图:Clean;自定义系统的About页:Clean;修改系统级菜单:Clean;实现透明窗体效果:Clean;爆破特技窗体:Clean;只允许建立一次子窗体的MDI程序:Clean;从外部DLL中调用子窗口:Clean;DllMdiChildForm:Clean;新颖的资源管理器界面:Clean;如何生成半圆形窗口:Clean;制作字幕滚动窗体:Clean;详解Canvas生成变色窗口背景:Clean;WINAMP风格磁化窗口:Clean;软件封面的图片显示制作:Clean;实现图片任意角度的旋转:Clean;奇妙的拼图游戏:Clean;使用PaintBox控件制作画图程序:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make;动态设置选项卡页面:Make;在标题栏中自定义按钮:Make;窗体开合窗帘式效果:Make;WindowsXP界面效果:Make;实现OutLook滚动工具栏效果:Make;在下拉列表框中显示树形视图:Make;自定义系统的About页:Make;修改系统级菜单:Make;实现透明窗体效果:Make;爆破特技窗体:Make;只允许建立一次子窗体的MDI程序:Make;从外部DLL中调用子窗口:Make;DllMdiChildForm:Make;新颖的资源管理器界面:Make;如何生成半圆形窗口:Make;制作字幕滚动窗体:Make;详解Canvas生成变色窗口背景:Make;WINAMP风格磁化窗口:Make;软件封面的图片显示制作:Make;实现图片任意角度的旋转:Make;奇妙的拼图游戏:Make"/>
+        <CallTarget Targets="ToolBar工具栏控件的使用:Make;动态建立主菜单项:Make;窗口界面的动态分割条:Make;动态设置选项卡页面:Make;在标题栏中自定义按钮:Make;窗体开合窗帘式效果:Make;WindowsXP界面效果:Make;实现OutLook滚动工具栏效果:Make;在下拉列表框中显示树形视图:Make;自定义系统的About页:Make;修改系统级菜单:Make;实现透明窗体效果:Make;爆破特技窗体:Make;只允许建立一次子窗体的MDI程序:Make;从外部DLL中调用子窗口:Make;DllMdiChildForm:Make;新颖的资源管理器界面:Make;如何生成半圆形窗口:Make;制作字幕滚动窗体:Make;详解Canvas生成变色窗口背景:Make;WINAMP风格磁化窗口:Make;软件封面的图片显示制作:Make;实现图片任意角度的旋转:Make;奇妙的拼图游戏:Make;使用PaintBox控件制作画图程序:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
